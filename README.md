@@ -1,5 +1,5 @@
 # react-todo
-Another basic todo app in React and Flux
+Another basic todo app in React and Flux, and use ESLint to format the ES6 code.
 
 #### Run
 
