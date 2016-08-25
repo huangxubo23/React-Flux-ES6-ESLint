@@ -1,14 +1,14 @@
-# react-todo
-Another basic todo app in React and Flux, and use ESLint to format the ES6 code.
+# React-Flux-ES6-ESLint
+A basic todo app in React and Flux, and use ESLint to format the ES6 code.
 
-#### Run
+### Run
 
 ```
 npm install
 npm start
 ```
 
-#### ESLint
+### ESLint
 ```
 npm run lint
 ```
@@ -17,7 +17,7 @@ or
 npm run lint --silent
 ```
 
-#### Develop
+### Develop
 
 Webpack auto-watches client assets.
 Nodemon auto-watches server assets.
@@ -27,7 +27,7 @@ npm install
 npm run dev
 ```
 
-#### Build
+### Build
 
 Bundle the assets for production.
 
@@ -35,7 +35,7 @@ Bundle the assets for production.
 npm run build
 ```
 
-#### Docker
+### Docker
 
 Create and run the docker-compose environment
 
