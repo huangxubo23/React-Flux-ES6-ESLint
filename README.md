@@ -8,6 +8,15 @@ npm install
 npm start
 ```
 
+#### ESLint
+```
+npm run lint
+```
+or
+```
+npm run lint --silent
+```
+
 #### Develop
 
 Webpack auto-watches client assets.
