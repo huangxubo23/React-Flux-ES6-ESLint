@@ -9,7 +9,7 @@ import { EventEmitter } from 'events';
 const CHANGE_EVENT = 'change';
 
 // Define the store as an empty array
-let _store = {
+const _store = {
   list: [],
   editing: false,
 };
@@ -45,49 +45,49 @@ AppDispatcher.register((payload) => {
 
   switch (action.actionType) {
 
-  case TodoConstants.NEW_ITEM:
+    case TodoConstants.NEW_ITEM:
 
-    // Add the data defined in the TodoActions
-    // which the View will pass as a payload
-    _store.editing = true;
-    TodoStore.emit(CHANGE_EVENT);
-    break;
+      // Add the data defined in the TodoActions
+      // which the View will pass as a payload
+      _store.editing = true;
+      TodoStore.emit(CHANGE_EVENT);
+      break;
 
-  case TodoConstants.SAVE_ITEM:
+    case TodoConstants.SAVE_ITEM:
 
-    // Add the data defined in the TodoActions
-    // which the View will pass as a payload
-    _store.list.push(action.text);
-    _store.editing = false;
-    TodoStore.emit(CHANGE_EVENT);
-    break;
+      // Add the data defined in the TodoActions
+      // which the View will pass as a payload
+      _store.list.push(action.text);
+      _store.editing = false;
+      TodoStore.emit(CHANGE_EVENT);
+      break;
 
-  case TodoConstants.REMOVE_ITEM:
+    case TodoConstants.REMOVE_ITEM:
 
-    // View should pass the text's index that
-    // needs to be removed from the store
-    _store.list = _store.list.filter((item, index) => {
-      return index !== action.index;
-    });
-    TodoStore.emit(CHANGE_EVENT);
-    break;
+      // View should pass the text's index that
+      // needs to be removed from the store
+      _store.list = _store.list.filter((item, index) => {
+        return index !== action.index;
+      });
+      TodoStore.emit(CHANGE_EVENT);
+      break;
 
-  case TodoConstants.GET_RANDOM_RESPONSE:
+    case TodoConstants.GET_RANDOM_RESPONSE:
 
-    // Construct the new todo string
-    //const firstName = action.response.results[0].user.name.first;
-    const firstName = action.response.results[0].name.first;
-    //const city = action.response.results[0].user.location.city;
-    const city = action.response.results[0].location.city;
-    const newTodo = `Call ${firstName} about real estate in ${city}`;
+      // Construct the new todo string
+      // const firstName = action.response.results[0].user.name.first;
+      const firstName = action.response.results[0].name.first;
+      // const city = action.response.results[0].user.location.city;
+      const city = action.response.results[0].location.city;
+      const newTodo = `Call ${firstName} about real estate in ${city}`;
 
-    // Add the new todo to the list
-    _store.list.push(newTodo);
-    TodoStore.emit(CHANGE_EVENT);
-    break;
+      // Add the new todo to the list
+      _store.list.push(newTodo);
+      TodoStore.emit(CHANGE_EVENT);
+      break;
 
-  default:
-    return true;
+    default:
+      return true;
   }
 });
 

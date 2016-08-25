@@ -2,7 +2,7 @@
 import { receiveRandom } from '../actions/TodoServerActions';
 import request from 'superagent';
 
-export function getRandomApi() {
+export default function getRandomApi() {
   request.get('http://api.randomuser.me/')
     .set('Accept', 'application/json')
     .end((err, response) => {

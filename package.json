@@ -22,7 +22,7 @@
     "start": "node server.js",
     "build": "webpack -p --progress --colors",
     "dev": "webpack --progress --colors --watch & nodemon",
-    "lint": "eslint --ignore-pattern **/bundle*.js --ext .js,.jsx assets/**"
+    "lint": "eslint --ignore-pattern **/bundle*.js --ext .js,.jsx assets/ --ext .jsx views/ --cache"
   },
   "repository": {
     "type": "git",

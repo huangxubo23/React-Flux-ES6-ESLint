@@ -45,13 +45,8 @@ export default class EditTodo extends React.Component {
           />
         </td>
         <td>
-          <button type="button"
-            onClick={this._save}
-            className="btn btn-link pull-right">
-            <span
-              className="glyphicon glyphicon-plus"
-              aria-hidden="true">
-            </span>
+          <button type="button" onClick={this._save} className="btn btn-link pull-right">
+            <span className="glyphicon glyphicon-plus" aria-hidden="true"></span>
           </button>
         </td>
       </tr>
