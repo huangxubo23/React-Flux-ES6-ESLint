@@ -1,14 +1,15 @@
 # React-Flux-ES6-ESLint
-A basic todo app in React and Flux, and use ESLint to format the ES6 code.
+A basic todo lists app in React and Flux, and use ESLint to format the ES6 code.
+使用React和Flux构建一个简单的任务管理列表应用，并使用ESLint规范ES6代码风格。
 
-### Run
+### Run/运行
 
 ```
 npm install
 npm start
 ```
 
-### ESLint
+### ESLint/代码风格规范
 ```
 npm run lint
 ```
@@ -17,7 +18,7 @@ or
 npm run lint --silent
 ```
 
-### Develop
+### Develop/开发环境
 
 Webpack auto-watches client assets.
 Nodemon auto-watches server assets.
@@ -27,7 +28,7 @@ npm install
 npm run dev
 ```
 
-### Build
+### Build/生产环境
 
 Bundle the assets for production.
 
